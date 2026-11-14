@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#09090b" />
+  <meta name="description" content="CINORA — Beyond the screen. Into the story." />
+  <title>CINORA — Beyond the Screen. Into the Story.</title>
+  <link rel="preconnect" href="https://image.tmdb.org" />
+  <link rel="preconnect" href="https://api.themoviedb.org" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="intro" class="intro" aria-label="CINORA introduction">
+    <div class="intro-grain"></div><div class="intro-orbit orbit-one"></div><div class="intro-orbit orbit-two"></div>
+    <div class="intro-center">
+      <div class="intro-monogram"><span>C</span><i></i></div>
+      <div class="intro-wordmark">CINORA</div>
+      <div class="intro-rule"><span></span></div>
+      <p class="intro-tagline">BEYOND THE SCREEN. INTO THE STORY.</p>
+      <p class="intro-credit">CREATED BY <strong>SAGE DICKSON</strong><br/><span>A DIGITAL DYNAMO LAB PRODUCTION</span></p>
+      <button id="skipIntro" class="skip-intro" type="button">SKIP INTRO <span>↗</span></button>
+    </div>
+    <div class="intro-bottom"><span>AN UNFORGETTABLE EXPERIENCE</span><span>EST. 2026</span></div>
+  </div>
+
+  <div id="app" class="app-shell is-hidden">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="CINORA home"><span class="brand-mark">C</span><span>CINORA</span></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" data-nav="home">Home</a>
+        <a class="nav-link" href="#movies" data-nav="movies">Movies</a>
+        <a class="nav-link" href="#tv" data-nav="tv">Series</a>
+        <a class="nav-link" href="#my-list" data-nav="my-list">My List</a>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-button" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
+        <button class="profile-button" id="profileButton" aria-label="About CINORA">S</button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero" id="hero">
+        <div class="hero-backdrop" id="heroBackdrop"></div><div class="hero-shade"></div>
+        <div class="hero-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span><span>THE CINORA PREMIERE</span></div>
+          <p class="hero-kicker" id="heroKicker">A STORY WORTH GETTING LOST IN</p>
+          <h1 id="heroTitle">Stories that<br/><em>stay with you.</em></h1>
+          <p class="hero-overview" id="heroOverview">Discover extraordinary worlds, unforgettable characters and stories that move beyond the screen.</p>
+          <div class="hero-meta" id="heroMeta"><span>CURATED FOR THE CURIOUS</span><span class="meta-dot"></span><span>YOUR NEXT OBSESSION AWAITS</span></div>
+          <div class="hero-buttons"><button id="heroExplore" class="button button-gold"><span>EXPLORE TITLE</span><b>↗</b></button><button id="heroInfo" class="button button-ghost">DISCOVER MORE <span>＋</span></button></div>
+        </div>
+        <div class="hero-side-note">CINEMA, REIMAGINED <span>01 / 04</span></div>
+        <div class="hero-bottom-line"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span></div>
+      </section>
+
+      <section id="searchPanel" class="search-panel is-hidden"><div class="search-wrap"><span class="search-symbol">⌕</span><input id="searchInput" type="search" placeholder="Search films, series, people..." autocomplete="off"/><button id="searchClose" aria-label="Close search">×</button></div><div id="searchResults" class="search-results"></div></section>
+
+      <section class="content-section intro-copy"><div><span class="section-kicker">A WORLD OF STORIES</span><h2>Find your next <em>favourite.</em></h2></div><p>From the stories everyone is talking about to the hidden gems you haven't discovered yet. Your next great watch starts here.</p></section>
+      <section class="content-section" id="trendingSection"><div class="section-heading"><div><span class="section-kicker">RIGHT NOW ON CINORA</span><h2>Trending <em>now</em></h2></div><button class="text-link" data-see-all="trending">VIEW COLLECTION <span>↗</span></button></div><div class="poster-row" id="trendingRow"><div class="loading-line"></div></div></section>
+      <section class="content-section feature-strip" id="editorialStrip"><div class="feature-copy"><span class="section-kicker">THE ART OF THE STORY</span><h2>Not just something<br/>to watch. Something<br/><em>to feel.</em></h2><p>Great stories don't end when the credits roll. They stay with us, challenge us and remind us why we love cinema.</p><span class="feature-signature">THE CINORA EXPERIENCE</span></div><div class="feature-art"><div class="feature-art-ring"></div><div class="feature-art-word">CINORA<span>®</span></div><div class="feature-art-caption">BEYOND THE SCREEN<br/>INTO THE STORY</div></div></section>
+      <section class="content-section" id="movies"><div class="section-heading"><div><span class="section-kicker">THE BIG SCREEN COLLECTION</span><h2>Popular <em>movies</em></h2></div><button class="text-link" data-see-all="popular-movies">VIEW COLLECTION <span>↗</span></button></div><div class="poster-row" id="moviesRow"><div class="loading-line"></div></div></section>
+      <section class="content-section" id="tv"><div class="section-heading"><div><span class="section-kicker">YOUR NEXT BINGE STARTS HERE</span><h2>Series worth <em>staying in for</em></h2></div><button class="text-link" data-see-all="popular-tv">VIEW COLLECTION <span>↗</span></button></div><div class="poster-row" id="tvRow"><div class="loading-line"></div></div></section>
+      <section class="content-section" id="topRated"><div class="section-heading"><div><span class="section-kicker">THE HIGHLY ACCLAIMED</span><h2>Critically <em>loved</em></h2></div><button class="text-link" data-see-all="top-rated">VIEW COLLECTION <span>↗</span></button></div><div class="poster-row" id="topRatedRow"><div class="loading-line"></div></div></section>
+      <section class="content-section" id="upcoming"><div class="section-heading"><div><span class="section-kicker">COMING INTO FOCUS</span><h2>Coming <em>soon</em></h2></div><button class="text-link" data-see-all="upcoming">VIEW COLLECTION <span>↗</span></button></div><div class="poster-row" id="upcomingRow"><div class="loading-line"></div></div></section>
+      <section class="content-section my-list-section is-hidden" id="my-list"><div class="section-heading"><div><span class="section-kicker">SAVED FOR LATER</span><h2>Your <em>watchlist</em></h2></div></div><div class="poster-row" id="myListRow"></div></section>
+      <section class="content-section continue-section is-hidden" id="continueSection"><div class="section-heading"><div><span class="section-kicker">PICK UP WHERE YOU LEFT OFF</span><h2>Continue <em>watching</em></h2></div></div><div class="poster-row" id="continueRow"></div></section>
+      <section class="genre-section content-section"><div class="section-heading"><div><span class="section-kicker">FOLLOW YOUR MOOD</span><h2>Explore by <em>genre</em></h2></div></div><div class="genre-grid" id="genreGrid"><button class="genre-tile">Drama <span>↗</span></button><button class="genre-tile">Thriller <span>↗</span></button><button class="genre-tile">Comedy <span>↗</span></button><button class="genre-tile">Adventure <span>↗</span></button><button class="genre-tile">Romance <span>↗</span></button><button class="genre-tile">Science Fiction <span>↗</span></button></div></section>
+    </main>
+
+    <footer class="footer"><div class="footer-brand"><span class="brand-mark">C</span><span>CINORA</span></div><p>BEYOND THE SCREEN. INTO THE STORY.</p><div class="footer-rule"></div><div class="footer-bottom"><span>© 2026 CINORA. ALL STORIES RESERVED.</span><span>CREATED BY SAGE DICKSON · A DIGITAL DYNAMO LAB PRODUCTION</span><span class="tmdb-note">This product uses the TMDB API but is not endorsed or certified by TMDB.</span></div></footer>
+  </div>
+
+  <div id="detailModal" class="modal is-hidden" role="dialog" aria-modal="true" aria-label="Title details"><div class="modal-backdrop" id="modalBackdrop"></div><div class="detail-panel"><button class="modal-close" id="detailClose" aria-label="Close details">×</button><div id="detailContent"></div></div></div>
+  <div id="playerModal" class="modal player-modal is-hidden" role="dialog" aria-modal="true" aria-label="Video player"><div class="modal-backdrop"></div><div class="player-panel"><div class="player-top"><div><span class="player-label">NOW PLAYING ON CINORA</span><h3 id="playerTitle">Your selection</h3></div><button id="playerClose" class="modal-close">×</button></div><div id="playerFrameWrap" class="player-frame-wrap"><div class="player-placeholder"><span class="player-play">▶</span><p>PLAYER SOURCE NOT CONFIGURED</p><small>Connect an authorised streaming provider to enable playback.</small></div></div><div class="player-controls" id="episodeControls"></div></div></div>
+  <div id="collectionModal" class="modal is-hidden" role="dialog" aria-modal="true"><div class="modal-backdrop"></div><div class="collection-panel"><div class="collection-head"><div><span class="section-kicker">CINORA COLLECTION</span><h2 id="collectionTitle">Explore</h2></div><button id="collectionClose" class="modal-close">×</button></div><div id="collectionGrid" class="collection-grid"></div></div></div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="/src/js/app.js"></script>
+</body>
+</html>
