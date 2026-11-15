@@ -1,4 +1,140 @@
 
+/* =====================================================
+   CINORA — OFFICIAL MASTER ARTWORK INTEGRATION
+   Final overrides — place at the VERY BOTTOM
+   ===================================================== */
+
+.intro {
+  background:
+    radial-gradient(ellipse at center, #17110a 0%, #080706 55%, #030303 100%);
+  overflow: hidden;
+}
+
+.intro-center {
+  width: 100%;
+  max-width: 1100px;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.intro-master-art {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+  position: relative;
+  animation: cinoraArtworkReveal 1.8s cubic-bezier(.16,.8,.25,1) both;
+}
+
+.cinora-master-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 68vh;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 15px 35px rgba(0,0,0,.65))
+    drop-shadow(0 0 30px rgba(217,154,39,.12));
+}
+
+@keyframes cinoraArtworkReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.96);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* Creator credit below the master artwork */
+
+.intro-credit {
+  margin-top: 12px;
+  text-align: center;
+  color: #c5a66e;
+  font-size: 9px;
+  letter-spacing: .2em;
+  line-height: 1.8;
+}
+
+.intro-credit strong {
+  color: #ffe3a1;
+}
+
+/* Skip button */
+
+.skip-intro {
+  position: relative;
+  top: auto;
+  margin-top: 22px;
+}
+
+/* Atmosphere */
+
+.intro-ambient {
+  pointer-events: none;
+}
+
+.intro-grain,
+.intro-orbit {
+  pointer-events: none;
+}
+
+/* Mobile optimisation */
+
+@media (max-width: 560px) {
+  .intro-center {
+    padding: 12px;
+  }
+
+  .intro-master-art {
+    width: 100%;
+  }
+
+  .cinora-master-image {
+    max-height: 58vh;
+  }
+
+  .intro-credit {
+    margin-top: 8px;
+    font-size: 8px;
+  }
+
+  .skip-intro {
+    margin-top: 15px;
+  }
+
+  .intro-bottom {
+    bottom: 15px;
+    font-size: 7px;
+  }
+}
+
+/* Short screens */
+
+@media (max-height: 650px) {
+  .cinora-master-image {
+    max-height: 55vh;
+  }
+
+  .intro-credit {
+    margin-top: 5px;
+  }
+
+  .skip-intro {
+    margin-top: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-master-art {
+    animation: none;
+  }
+}
+
 /* =========================================================
    CINORA — MASTER GOLD EMBLEM
    Cinematic metallic C + integrated play symbol + film orbit
