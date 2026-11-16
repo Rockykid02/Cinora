@@ -1,4 +1,6 @@
+import { inject } from '@vercel/analytics';
 
+inject();
 import '../styles/main.css';
 import * as TMDB from './api/tmdb.js';
 import { getList, toggleList, getProgress, trackProgress } from './utils/storage.js';
